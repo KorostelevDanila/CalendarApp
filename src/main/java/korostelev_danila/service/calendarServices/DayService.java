@@ -2,7 +2,9 @@ package korostelev_danila.service.calendarServices;
 
 import korostelev_danila.model.Day;
 import korostelev_danila.model.enums.DayOfWeek;
+import org.springframework.stereotype.Service;
 
+@Service
 public class DayService {
 
     public Day getDay(DayOfWeek dayOfWeek, int dayNumber) {
