@@ -14,4 +14,11 @@ public class Calendar {
     public void setYear(Year year) {
         this.year = year;
     }
+
+    @Override
+    public String toString() {
+        return "Calendar{" +
+                "year=" + year +
+                '}';
+    }
 }

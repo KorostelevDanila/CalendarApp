@@ -18,4 +18,12 @@ public class Year {
     public String getYear() {
         return year;
     }
+
+    @Override
+    public String toString() {
+        return "Year{" +
+                "year='" + year + '\'' +
+                ", months=" + months +
+                '}';
+    }
 }
