@@ -5,11 +5,13 @@ import korostelev_danila.model.enums.DayOfWeek;
 
 public class DayService {
 
-    public Day getDay(DayOfWeek dayOfWeek, String dayNumber) {
+    public Day getDay(DayOfWeek dayOfWeek, int dayNumber) {
         return new Day(dayNumber, dayOfWeek);
     }
 
     public Day getNextDay(Day day) {
-        return null;
+        int newDayNumber = day.getDayNumber() + 1;
+        DayOfWeek newDayOfWeek = DayOfWeek.values()[day.getDayOfWeek().ordinal()].next();
+        return new Day(newDayNumber, newDayOfWeek);
     }
 }
