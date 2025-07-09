@@ -10,7 +10,7 @@ public class YearConsts {
     public static final int DAYS_IN_REGULAR_YEAR = 365;
     public static final int DAYS_IN_LEAP_YEAR = 366;
 
-    public static final List<Integer> DAYS_IN_MONTHS = new ArrayList<>(Arrays.asList(
+    public static final ArrayList<Integer> DAYS_IN_MONTHS = new ArrayList<>(Arrays.asList(
             31, // Jan
             28, // Feb
             31, // Mar
@@ -24,4 +24,19 @@ public class YearConsts {
             30, // Nov
             31  // Dec
             ));
+
+    public static final ArrayList<String> MONTHS_NAMES = new ArrayList<>(Arrays.asList(
+       "January",
+       "February",
+       "March",
+       "April",
+       "May",
+       "June",
+       "July",
+       "August",
+       "September",
+       "October",
+       "November",
+       "December"
+    ));
 }
