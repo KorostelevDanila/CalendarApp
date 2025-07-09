@@ -4,8 +4,8 @@ import java.util.List;
 import java.util.Objects;
 
 public class Month {
-    private String name;
-    private List<Day> days;
+    private final String name;
+    private final List<Day> days;
 
     public Month(String name, List<Day> days) {
         this.name = name;

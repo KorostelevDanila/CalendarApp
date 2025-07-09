@@ -5,8 +5,8 @@ import korostelev_danila.model.enums.DayOfWeek;
 import java.util.Objects;
 
 public class Day {
-    private int dayNumber;
-    private DayOfWeek dayOfWeek;
+    private final int dayNumber;
+    private final DayOfWeek dayOfWeek;
 
     public Day(int dayNumber, DayOfWeek dayOfWeek) {
         this.dayNumber = dayNumber;

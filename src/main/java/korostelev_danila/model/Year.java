@@ -3,8 +3,8 @@ package korostelev_danila.model;
 import java.util.List;
 
 public class Year {
-    private String year;
-    private List<Month> months;
+    private final String year;
+    private final List<Month> months;
 
     public Year(String year, List<Month> months) {
         this.year = year;
