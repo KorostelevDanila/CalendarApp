@@ -7,13 +7,21 @@ import org.springframework.stereotype.Service;
 @Service
 public class CalendarService {
     private final YearService yearService;
+    private Year lastRequestedYear = null;
 
     public CalendarService(YearService yearService) {
         this.yearService = yearService;
     }
 
     public Calendar getCalendar(String year) {
-        return null;
+        if (lastRequestedYear != null) {
+            if (lastRequestedYear.getYear().equals(year)) {
+                return new Calendar(lastRequestedYear);
+            }
+        }
+        Year requestedYear = yearService.getYear(year);
+        lastRequestedYear = requestedYear;
+        return new Calendar(requestedYear);
     }
 
 }
