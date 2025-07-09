@@ -12,5 +12,13 @@ public enum Months {
     SEPTEMBER,
     OCTOBER,
     NOVEMBER,
-    DECEMBER
+    DECEMBER;
+
+    public Months next() {
+        int newIndex = this.ordinal() + 1;
+        if (newIndex > 11) {
+            newIndex = 0;
+        }
+        return values()[newIndex];
+    }
 }
